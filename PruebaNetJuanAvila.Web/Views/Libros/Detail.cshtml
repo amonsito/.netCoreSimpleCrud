@@ -1,0 +1,54 @@
+﻿@model PruebaNetJuanAvila.Dto.Dto.LibrosDto
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h1>Detail</h1>
+
+<div>
+    <h4>LibrosDto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EditorialName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EditorialName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AutoresName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AutoresName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Isbn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Isbn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sinopsis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sinopsis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NPaginas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NPaginas)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Isbn  }) |
+    <a asp-action="Index">Ir a Libros</a>
+</div>

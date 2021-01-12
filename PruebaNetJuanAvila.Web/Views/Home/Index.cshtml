@@ -1,0 +1,21 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Metodos</h1>
+
+    <a class="nav-link text-dark" asp-area="" asp-controller="Autors" asp-action="Index">1. TraerAutores</a>
+    
+    <a class="nav-link text-dark">2. TraerAutoresPorEditorial</a>
+    
+    <form asp-action="Index" asp-controller="Autors">
+        <select id="EditorialId" name="EditorialId" class="form-control d-inline" asp-items="@ViewBag.Editoriales"></select>
+        <input type="submit" value="ir" class="btn btn-primary d-inline" />
+    </form>
+
+    <a class="nav-link text-dark" asp-area="" asp-controller="Editorials" asp-action="Create">3. Crear Editorial</a>
+
+    <a class="nav-link text-dark" asp-area="" asp-controller="Libros" asp-action="Index">Maestro detalle de libros</a>
+</div>

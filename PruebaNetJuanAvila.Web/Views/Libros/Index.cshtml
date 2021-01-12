@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PruebaNetJuanAvila.Dto.Dto.LibrosDto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Libros</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo libro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Isbn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EditorialName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sinopsis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NPaginas)
+            </th>
+            <th>
+                Autores
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EditorialName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sinopsis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NPaginas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutoresName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Isbn })
+                @Html.ActionLink(linkText:"Detalle", actionName:"Detail", new { id = item.Isbn })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
